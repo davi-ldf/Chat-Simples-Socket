@@ -1,0 +1,24 @@
+{
+  "name": "chat-simples-socket",
+  "version": "1.0.0",
+  "description": "Chat simples em NodeJS utilizando Socket",
+  "homepage": "https://github.com/davi-ldf/Chat-Simples-Socket#readme",
+  "bugs": {
+    "url": "https://github.com/davi-ldf/Chat-Simples-Socket/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davi-ldf/Chat-Simples-Socket.git"
+  },
+  "license": "MIT",
+  "author": "davi-ldf",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "socket.io": "^4.8.1"
+  }
+}

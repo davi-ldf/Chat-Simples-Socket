@@ -1,0 +1,7 @@
+> Socket
+npm install scoket.io
+- O que é?
+    É uma Requisição que estabelece uma conexão >permanente< com o Servidor.
+
+- Para que serve?
+    Receber e enviar dados em tempo real, em casos em que seria muito custoso ficar encerrando e iniciando novas requisições.
