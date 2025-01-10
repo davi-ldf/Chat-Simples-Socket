@@ -13,7 +13,7 @@ server.listen(4000, () => {
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-
+let connectedUsers = [];
 
 io.on('connection', (socket) => {
     console.log('Conexão detectada...');
@@ -23,7 +23,7 @@ io.on('connection', (socket) => {
         connectedUsers.push( username );
         console.log( connectedUsers );
 
+        socket.emit('user-ok', connectedUsers);
 
-        
     });
 });

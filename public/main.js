@@ -11,6 +11,15 @@ let textInput = document.querySelector('#chatTextInput');
 loginPage.style.display = 'flex';
 chatPage.style.display = 'none';
 
+function renderUserList () {
+    let ul = document.querySelector('.userList');
+    ul.innerHTML = '';
+
+    userList.forEach(i => {
+        ul.innerHTML += `<li>${i}</li>`;
+    })
+}
+
 
 loginInput.addEventListener('keyup', (event) => {
     if(event.keyCode === 13) {
@@ -22,4 +31,14 @@ loginInput.addEventListener('keyup', (event) => {
             socket.emit('join-request', username);
         }
     }
-})
+});
+
+socket.on('user-ok', (list) => {
+    loginPage.style.display = 'none';
+    chatPage.style.display = 'flex';
+    textInput.focus();
+
+    userList = list;
+    renderUserList();
+
+});
